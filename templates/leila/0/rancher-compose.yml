@@ -48,6 +48,7 @@
       description: "path for downloads"
       type: "string"
       required: true
+
 Plex:
   scale: 1
 Sickrage:
