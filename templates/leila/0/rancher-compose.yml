@@ -5,47 +5,47 @@
   questions:
     - variable: "LOGIN_PLEX"
       label: "Plex login"
-      description: "login for plex"
+      description: "login pour plex"
       type: "string"
       required: true
     - variable: "PWD_PLEX"
       label: "pwd plex"
-      description: "password for plex"
+      description: "password pour plex"
       type: "string"
       required: true
     - variable: "STORAGE_PLEX"
       label: "Plex storage"
-      description: "location of videos"
+      description: "Stockage Plex"
       type: "string"
       required: true
     - variable: "CONFIG_PLEX"
       label: "Plex config files"
-      description: "location of config files"
+      description: "Configuration Plex"
       type: "string"
       required: true
     - variable: "STORAGE_S"
-      label: "path to storage"
-      description: "Storage path for TV shows"
+      label: "Stockage des Séries"
+      description: "Stockage pour Sickrage"
       type: "string"
       required: true
     - variable: "CONFIG_S"
-      label: "config file path"
-      description: "Path to configuration files"
+      label: "Fichier de conf Sickrage"
+      description: "Configuration pour Sickrage"
       type: "string"
       required: true
     - variable: "LOGIN_T"
       label: "Transmission login"
-      description: "login to access transmission"
+      description: "login transmission"
       type: "string"
       required: true
     - variable: "PWD_T"
-      label: "Transmission password"
-      description: "password to access transmission"
+      label: "Mot de passe transmission"
+      description: "Mot de passe Transmission"
       type: "string"
       required: true
     - variable: "STORAGE_T"
-      label: "Path for downloads"
-      description: "path for downloads"
+      label: "Stockage Transmission"
+      description: "Chemin pour le téléchargement"
       type: "string"
       required: true
 
