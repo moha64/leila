@@ -1,0 +1,46 @@
+Plex:
+  environment:
+    PLEX_USERNAME: "${LOGIN_PLEX}"
+    PLEX_PASSWORD: "${PWD_PLEX}"
+  log_driver: ''
+  labels:
+    io.rancher.container.pull_image: always
+  tty: true
+  log_opt: {}
+  image: timhaak/plex
+  volumes:
+  - ${CONFIG_PLEX}:/config
+  - ${STORAGE_PLEX}:/data
+  stdin_open: true
+Sickrage:
+  log_driver: ''
+  labels:
+    io.rancher.container.pull_image: always
+  tty: true
+  log_opt: {}
+  image: timhaak/sickrage
+  volumes:
+  - ${CONFIG_S}:/config
+  - ${STORAGE_S}:/data
+  stdin_open: true
+Transmission:
+  environment:
+    TRPASSWD: ${PWD_T}
+    TRUSER: ${LOGIN_T}
+  labels:
+    io.rancher.container.pull_image: always
+  tty: true
+  image: dperson/transmission
+  volumes:
+  - ${STORAGE_T}:/var/lib/transmission-daemon/downloads
+  stdin_open: true
+Yunohost:
+  log_driver: ''
+  labels:
+    io.rancher.container.pull_image: always
+  tty: true
+  command:
+  - /sbin/init
+  log_opt: {}
+  image: yunohost/full
+  stdin_open: true
